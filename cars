@@ -1,0 +1,101 @@
+using System;
+using System.Web;
+
+namespace car
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string answers;
+            int cars;
+
+            Console.WriteLine("choice car you want to buy");
+            Console.WriteLine("1. lambo");
+            Console.WriteLine("2. tesla");
+            Console.WriteLine("3. toyota");
+            Console.WriteLine("");
+
+            Console.Write("car that you want to buy: ");
+            cars = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+            if (cars == 1)
+            {
+                Console.WriteLine("You choose the lamborghini");
+                Console.WriteLine("Price: 50,000,000");
+                Console.Write("You want to buy this car?: ");
+                answers = Convert.ToString(Console.ReadLine());
+
+                if (answers == "yes")
+                {
+                    Console.Write("enter your money: ");
+                    int price = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("");
+                    if(price <= 40000000)
+                    {
+                        Console.WriteLine("okay! thank you! the car is not afford!");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Write("Congratiolation the car is yours!!");
+                        Console.ReadLine() ;
+                    }
+                }
+            }
+            else if (cars == 2)
+            {
+                Console.WriteLine("You choose the tesla!");
+                Console.WriteLine("4,000,000");
+                Console.Write("You want to buy this car?: ");
+                string tesla = Convert.ToString(Console.ReadLine());
+                if (tesla == "yes")
+                {
+                    Console.Write("enter your money: ");
+                    int price = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("");
+                    if (price <= 30000000)
+                    {
+                        Console.WriteLine("okay! thank you! the car is not afford");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Write("Congratiolation the car is yours!!");
+                        Console.ReadLine();
+                    }
+                }
+            }
+            else if (cars == 3)
+            {
+                Console.WriteLine("You choose the toyota");
+                Console.WriteLine("Price: 706,000");
+                Console.Write("You want to buy this car?: ");
+                string toyota = Convert.ToString(Console.ReadLine());
+                if (toyota == "yes")
+                {
+                    Console.Write("enter your money: ");
+                    int price = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("");
+                    if (price <= 705000)
+                    {
+                        Console.WriteLine("okay! thank you! the car is not afford");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Write("Congratiolation the car is yours!!");
+                        Console.ReadLine();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("invalid choices");
+                Console.WriteLine("THANK YOU FOR VISITING OUR SHOP!!");
+            }
+            Console.ReadKey(true);
+        }
+    }
+}
